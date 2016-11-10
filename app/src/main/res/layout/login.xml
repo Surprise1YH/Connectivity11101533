@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/water"
+    android:id="@+id/login_main">
+
+    <com.example.connectivity.CircleImageView
+        android:onClick="onClick"
+        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:id="@+id/login_avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/touxiang"
+        app:civ_border_color="#000000"
+        app:civ_border_overlay="true"
+        app:civ_border_width="2dp" />
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/login_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:hint="@string/username" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/login_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:hint="@string/password"
+        android:password="true" />
+
+    <Button
+        android:id="@+id/login_login"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#999789"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/login"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/login_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <CheckBox
+            android:id="@+id/login_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/ask" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/login_ask"
+            android:layout_toRightOf="@id/login_ask"
+            android:onClick="rule"
+            android:text="@string/rule" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/login_nologin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/nologin" />
+
+    <TextView
+        android:id="@+id/login_newuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/newuser" />
+
+
+</RelativeLayout>

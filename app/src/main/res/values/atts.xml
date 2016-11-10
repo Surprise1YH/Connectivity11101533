@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--declare-styleable是告诉系统这是自定义的属性-->
+    <!--<declare-styleable name="这里边写的是该自定义UI的名字"-->
+    <declare-styleable name="MyTopbar">
+        <!--name是要引用的资源的名字，format是引用资源的类型-->
+        <attr name="title1" format="string" />
+        <!--dimension是尺寸类型-->
+        <attr name="title1TextSize" format="dimension" />
+
+        <attr name="title1TextColor" format="color" />
+
+
+        <attr name="leftText" format="string" />
+
+        <attr name="leftTextColor" format="color" />
+        <!--<attr name="leftTextSize" format="dimension" />-->
+        <!--reference是为了让背景变得多选化，可以让以后用drawable或者color-->
+        <attr name="leftBackground" format="reference|color" />
+
+
+        <attr name="rightText" format="string" />
+
+        <attr name="rightTextColor" format="color" />
+        <!--<attr name="rightTextSize" format="dimension" />-->
+        <attr name="rightBackground" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+
+        <attr name="civ_border_width" format="dimension" />
+
+        <attr name="civ_border_color" format="color" />
+
+        <attr name="civ_border_overlay" format="boolean" />
+
+        <attr name="civ_fill_color" format="color" />
+
+    </declare-styleable>
+</resources>

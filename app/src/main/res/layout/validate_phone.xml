@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cloud">
+
+    <com.example.connectivity.MyTopbar
+        android:id="@+id/validate_phone_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app1:leftBackground="#996699"
+        app1:leftText="返回"
+        app1:leftTextColor="#000000"
+        app1:title1="@string/title1"
+        app1:title1TextColor="#000000"
+        app1:title1TextSize="10sp">
+
+    </com.example.connectivity.MyTopbar>
+
+    <TextView
+        android:id="@+id/validate_phone_country"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/validate_phone_topbar"
+        android:layout_marginTop="40dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="@string/mycountry"
+        android:textSize="20sp" />
+
+    <EditText
+        android:maxLength="11"
+        android:id="@+id/validate_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/validate_phone_topbar"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/validate_phone_country"
+        android:hint="@string/input_phonenumber"
+        android:phoneNumber="true" />
+
+    <TextView
+        android:id="@+id/validate_phone_submit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/validate_phone_country"
+        android:layout_marginTop="30dp"
+        android:background="#996699"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/captcha_send"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/validate_phone_captcha"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/validate_phone_country"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@id/validate_phone_submit"
+        android:hint="@string/input_captcha" />
+
+    <CheckBox
+        android:id="@+id/validate_phone_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/validate_phone_captcha"
+        android:layout_marginLeft="5dp"
+        android:text="@string/ask" />
+
+    <TextView
+        android:id="@+id/validate_phone_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/validate_phone_ask"
+        android:layout_toRightOf="@id/validate_phone_ask"
+        android:text="@string/rule1" />
+
+    <Button
+        android:id="@+id/validate_phone_next"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/validate_phone_ask"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#738ffe"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/next"
+        android:textSize="20sp" />
+
+</RelativeLayout>

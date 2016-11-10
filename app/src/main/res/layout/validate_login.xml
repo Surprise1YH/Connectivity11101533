@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cloud">
+
+    <com.example.connectivity.MyTopbar
+        android:id="@+id/validate_login_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:leftBackground="#996699"
+        app:leftText="@string/back"
+        app:leftTextColor="#000000"
+        app:title1="@string/title3"
+        app:title1TextColor="#000000"
+        app:title1TextSize="10sp">
+
+    </com.example.connectivity.MyTopbar>
+
+    <TextView
+        android:id="@+id/validate_login_country"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/validate_login_topbar"
+        android:layout_marginTop="40dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="@string/mycountry"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/validate_login_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/validate_login_topbar"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/validate_login_country"
+        android:hint="@string/input_phonenumber"
+        android:phoneNumber="true" />
+
+    <TextView
+        android:background="#996699"
+        android:gravity="center"
+        android:id="@+id/validate_login_submit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/validate_login_number"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/captcha_send"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/validate_login_captcha"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/validate_login_country"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@id/validate_login_submit"
+        android:hint="@string/input_captcha" />
+
+    <TextView
+        android:id="@+id/validate_login_revise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/validate_login_submit"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/revise_password" />
+
+    <Button
+        android:id="@+id/validate_login_login"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/validate_login_revise"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#738ffe"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/login"
+        android:textSize="20sp" />
+
+</RelativeLayout>
